@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "57052bb2daa1a4085c01ba90c9331b4f",
+    "revision": "727612926e802819e6c16af91a832afc",
     "url": "/klir-twitter-deva/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/klir-twitter-deva/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "f90734b20dfb04ebae96",
+    "revision": "dc2df81807582452cbdd",
     "url": "/klir-twitter-deva/static/css/main.ad6a27b1.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/klir-twitter-deva/static/js/2.8abd1b08.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f90734b20dfb04ebae96",
-    "url": "/klir-twitter-deva/static/js/main.538f9b12.chunk.js"
+    "revision": "dc2df81807582452cbdd",
+    "url": "/klir-twitter-deva/static/js/main.309fd9f1.chunk.js"
   },
   {
     "revision": "d9e1fd00579ebfa5f5c3",

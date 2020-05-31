@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/klir-twitter-deva/static/css/main.ad6a27b1.chunk.css",
-    "main.js": "/klir-twitter-deva/static/js/main.538f9b12.chunk.js",
-    "main.js.map": "/klir-twitter-deva/static/js/main.538f9b12.chunk.js.map",
+    "main.js": "/klir-twitter-deva/static/js/main.309fd9f1.chunk.js",
+    "main.js.map": "/klir-twitter-deva/static/js/main.309fd9f1.chunk.js.map",
     "runtime-main.js": "/klir-twitter-deva/static/js/runtime-main.66a7cfee.js",
     "runtime-main.js.map": "/klir-twitter-deva/static/js/runtime-main.66a7cfee.js.map",
     "static/css/2.af3c1da9.chunk.css": "/klir-twitter-deva/static/css/2.af3c1da9.chunk.css",
     "static/js/2.8abd1b08.chunk.js": "/klir-twitter-deva/static/js/2.8abd1b08.chunk.js",
     "static/js/2.8abd1b08.chunk.js.map": "/klir-twitter-deva/static/js/2.8abd1b08.chunk.js.map",
     "index.html": "/klir-twitter-deva/index.html",
-    "precache-manifest.8b55c6641bfe3bffacbb636ad2e94c10.js": "/klir-twitter-deva/precache-manifest.8b55c6641bfe3bffacbb636ad2e94c10.js",
+    "precache-manifest.ed8509803846acb63e7ab392d0c6c474.js": "/klir-twitter-deva/precache-manifest.ed8509803846acb63e7ab392d0c6c474.js",
     "service-worker.js": "/klir-twitter-deva/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/klir-twitter-deva/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.ad6a27b1.chunk.css.map": "/klir-twitter-deva/static/css/main.ad6a27b1.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.8abd1b08.chunk.js",
     "static/css/main.ad6a27b1.chunk.css",
-    "static/js/main.538f9b12.chunk.js"
+    "static/js/main.309fd9f1.chunk.js"
   ]
 }
