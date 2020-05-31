@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/klir-twitter-dev/precache-manifest.d7a9d906b09b20b65f68439baec7789d.js"
+  "/klir-twitter-dev/precache-manifest.0843828721e76c27c562a18057576f68.js"
 );
 
 self.addEventListener('message', (event) => {
