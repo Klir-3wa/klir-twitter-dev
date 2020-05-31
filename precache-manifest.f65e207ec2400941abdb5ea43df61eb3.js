@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ebe895e6c9aa85b1327d4e44c71b52bc",
+    "revision": "02ce32315febd8bc81f12733ead97526",
     "url": "/klir-twitter-dev/index.html"
   },
   {
