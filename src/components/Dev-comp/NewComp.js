@@ -26,7 +26,7 @@ export default class NewComp extends Component {
 getdata(){
   axios.get(`http://127.0.0.1:8000/api/id`)
   .then((res)=>{
-    console.log(res.data)
+    
      this.setState({
       tweet2:res.data
          
@@ -38,7 +38,14 @@ componentDidMount(){
  
 }
 
+delete(id){
 
+  console.log(id.id);
+  axios.delete(`http://127.0.0.1:8000/api/delete/${id.id}`)
+  .then((res)=>{
+     this.getAll();
+  })
+}
 
   render() {
     return (
@@ -50,6 +57,7 @@ componentDidMount(){
             {this.state.tweet2.map((tw) => (
               <div className="col-md-4 mt-4" key={tw.twitterID}>
                 <TwitterTweetEmbed tweetId={tw.twitterID}/>
+                <button onClick={this.delete.bind(null, { id: tw.id })}>Supprimer</button>
               </div>
               
             ))
