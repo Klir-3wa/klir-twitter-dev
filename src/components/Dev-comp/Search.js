@@ -93,7 +93,7 @@ handleClick = (data) => {
 
  axios.post(`http://127.0.0.1:8000/api/twitter`,{twitterID:data.id})
  .then((res)=>{
-   this.getAll();
+   
 })
 
 }

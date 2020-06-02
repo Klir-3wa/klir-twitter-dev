@@ -39,11 +39,11 @@ componentDidMount(){
 }
 
 delete(id){
-
+ 
   console.log(id.id);
   axios.delete(`http://127.0.0.1:8000/api/delete/${id.id}`)
   .then((res)=>{
-     this.getAll();
+   
   })
 }
 
