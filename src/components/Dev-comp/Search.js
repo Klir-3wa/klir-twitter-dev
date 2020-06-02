@@ -24,6 +24,7 @@ export class Search extends Component {
       search: "",
       result_type: "mixed",
       count: 1,
+
     };
   }
 
@@ -44,12 +45,16 @@ export class Search extends Component {
         });
     }
   };
-  handleChange = (e) => {
-    this.setState({ search: e.target[0].value });
-  };
+  // handleChange = (e) => {
+  //   console.log(e.target[0].value);
+  //   // this.setState({ search: e.target[0].value });
+  // }
   handleSubmit = (e) => {
     e.preventDefault();
 
+
+
+    
     // console.log(e.target[0].value);
     this.setState({ search: e.target[0].value });
     // console.log(e.target[1].value);
@@ -73,6 +78,28 @@ export class Search extends Component {
   //     })
 
   // }
+
+
+//   handleClick=(e)=>{
+
+// e.preventDefault();
+
+// console.log(e);
+
+
+handleClick = (data) => {
+  console.log(data.id)
+  
+
+ axios.post(`http://127.0.0.1:8000/api/twitter`,{twitterID:data.id})
+ .then((res)=>{
+   this.getAll();
+})
+
+}
+
+
+
 
   render() {
     return (
@@ -102,15 +129,14 @@ export class Search extends Component {
         </form>
         {/* <Navbar  /> */}
         {/* <Search twitterSearch={this.Git} /> */}
-        <div className="container">
+        <div className="container" >
           <div className="row mt-5">
             {this.state.tweet.map((tw) => (
               <div className="col-md-4 mt-4" key={tw.id_str}>
                 <TwitterTweetEmbed tweetId={tw.id_str} />
 
-                <a href="" className="btn btn-danger btn-blocl">
-                  Ajouter au favoris
-                </a>
+                
+                <button onClick={this.handleClick.bind(null, { id: tw.id_str })}>ajouter au favoris</button>
               </div>
             ))}
 
