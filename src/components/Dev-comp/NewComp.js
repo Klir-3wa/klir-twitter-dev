@@ -69,7 +69,7 @@ delete(id){
         <div className="container" >
           <div className="row mt-5">
             {this.state.tweet2.map((tw) => (
-              <div className="col-md-4 mt-4" key={tw.twitterID}>
+              <div className="col-md-6 mt-4" key={tw.twitterID}>
                 <TwitterTweetEmbed tweetId={tw.twitterID}/>
                 <button onClick={this.delete.bind(null, { id: tw.id })}>Supprimer</button>
               </div>
