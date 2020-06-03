@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../../App.css";
-import logo from "../../img/KLIR.png";
+import logo from "./Tweet.png";
 import { Link } from "react-router-dom";
 
 export default class Header extends Component {
@@ -9,7 +9,7 @@ export default class Header extends Component {
    
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#"><img src={logo} className="w-25"/></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
