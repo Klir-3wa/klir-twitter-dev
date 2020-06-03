@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 // import Search from "./components/Search";
 
 ReactDOM.render(<App />, document.getElementById("root"));

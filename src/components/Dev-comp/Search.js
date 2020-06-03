@@ -32,7 +32,7 @@ export class Search extends Component {
     const tokenRandom = `AAAAAAAAAAAAAAAAAAAAAAs5%2FAAAAAAA%2BFhxtLDRr2AuKh5zdIHTczhg0Jg%3DltF0dqGzLFlmXH9wjI8HkO1gEzGlnCYUegwIOVVu1Umn8Yi1sX`;
     const tokenApp = `AAAAAAAAAAAAAAAAAAAAAGZtEgEAAAAA%2BFTRfdzKslvseLjUL6%2BmE7WhL7w%3Da4qVaLEW53IKvaLmPyDO3lVyq7p6pxIPoPWZaZDX9evKqcFUVt`;
 
-    if (search == "") {
+    if (search ===!'') {
       alert("merci de mettre un mot pour la recherche");
     } else {
       const api = `https://cors-anywhere.herokuapp.com/https://api.twitter.com/1.1/search/tweets.json?q=${search}&result_type=mixed&count=${count}`;
@@ -45,46 +45,23 @@ export class Search extends Component {
         });
     }
   };
-  // handleChange = (e) => {
-  //   console.log(e.target[0].value);
-  //   // this.setState({ search: e.target[0].value });
-  // }
+ 
   handleSubmit = (e) => {
     e.preventDefault();
 
 
 
     
-    // console.log(e.target[0].value);
+   
     this.setState({ search: e.target[0].value });
-    // console.log(e.target[1].value);
+    
     this.setState({ count: e.target[1].value });
     this.gettwitte(this.state.search, this.state.count);
   };
   componentDidUpdate() {
-    // console.log(this.state.search);
+
   }
   componentDidMount() {}
-
-  // Git=(data)=>{
-
-  //     const api = `https://cors-anywhere.herokuapp.com/https://api.twitter.com/1.1/search/tweets.json?q=%23${data}&result_type=recent`;
-  //     const token = `AAAAAAAAAAAAAAAAAAAAAAs5%2FAAAAAAA%2BFhxtLDRr2AuKh5zdIHTczhg0Jg%3DltF0dqGzLFlmXH9wjI8HkO1gEzGlnCYUegwIOVVu1Umn8Yi1sX`;
-  //     axios.get(api, { headers: {"Authorization" : `Bearer ${token}`} }).then(res => {
-  //        console.log(res.data.statuses)
-  //        this.setState({
-  //         tweet:res.data.statuses
-  //        })
-  //     })
-
-  // }
-
-
-//   handleClick=(e)=>{
-
-// e.preventDefault();
-
-// console.log(e);
 
 
 handleClick = (data) => {
@@ -127,12 +104,11 @@ handleClick = (data) => {
             Search
           </button>
         </form>
-        {/* <Navbar  /> */}
-        {/* <Search twitterSearch={this.Git} /> */}
+     
         <div className="container" >
           <div className="row mt-5">
             {this.state.tweet.map((tw) => (
-              <div className="col-md-4 mt-4" key={tw.id_str}>
+              <div className="col-md-6 mt-4" key={tw.id_str}>
                 <TwitterTweetEmbed tweetId={tw.id_str} />
 
                 
@@ -140,7 +116,7 @@ handleClick = (data) => {
               </div>
             ))}
 
-            <TwitterMomentShare momentId={"650667182356082688"} />
+           
           </div>
         </div>
       </div>

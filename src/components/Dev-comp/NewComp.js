@@ -23,7 +23,8 @@ export default class NewComp extends Component {
     };
   }
 
-getdata(){
+getdata(e){
+ 
   axios.get(`http://127.0.0.1:8000/api/id`)
   .then((res)=>{
     
@@ -39,17 +40,30 @@ componentDidMount(){
 }
 
 delete(id){
- 
+  
+
+
   console.log(id.id);
   axios.delete(`http://127.0.0.1:8000/api/delete/${id.id}`)
   .then((res)=>{
-   
+ console.log(res)
+
   })
+
+ 
+  // let n = twt.findIndex(twt=>twt.id == id.id)
+  //    twt.splice(n,1)
+  //    console.log(twt)
+  //    this.setState({
+  //      tweet2 :twt
+  //    })
+ 
+
 }
 
   render() {
     return (
-      <div>
+      <div onSubmit={this.getdata}>
         <h1>new Compoenent</h1>
 
         <div className="container" >
