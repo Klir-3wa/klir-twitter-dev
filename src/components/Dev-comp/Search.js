@@ -61,7 +61,7 @@ export class Search extends Component {
   componentDidUpdate() {
 
   }
-  componentDidMount() {}
+
 
 
 handleClick = (data) => {
@@ -87,11 +87,12 @@ handleClick = (data) => {
           className="form-inline my-2 my-lg-0 mt-5"
         >
           <input
-            className="form-control mr-sm-2"
+            className="form-control mr-sm-1"
             type="text"
             placeholder="Search"
             onChange={this.handleChange}
           />
+         
           <select className="form-control mdb-select md-form mr-2">
             <option value={this.state.count} disabled selected>
               Number of tweets

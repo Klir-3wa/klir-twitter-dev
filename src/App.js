@@ -15,6 +15,7 @@ import NewComp from "./components/Dev-comp/NewComp";
 
 import Search from "./components/Dev-comp/Search";
 
+
 import "./App.css";
 
 export default class App extends Component {
@@ -29,6 +30,7 @@ export default class App extends Component {
               <Route path="/bookmarks" component={Bookmarks} />
               <Route path="/dev" exact component={Dev} />
 
+              
               <Route path="/dev/search" exact component={Search} />
             <Route path="/dev/newcomp" exact component={NewComp} />
             <Route path="/dev/live" exact component={Live} />
