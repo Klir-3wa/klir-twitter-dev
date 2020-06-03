@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import Parser from "html-react-parser";
 import axios from "axios";
+import searchlogo from "./search.png";
 
 // import Navbar from './Navbar';
 import {
@@ -81,7 +82,7 @@ handleClick = (data) => {
   render() {
     return (
       <div>
-        <h1>Search component</h1>
+        <h1><img src={searchlogo} className="w-25"/> rechercher des #hashtags</h1>
         <form
           onSubmit={this.handleSubmit}
           className="form-inline my-2 my-lg-0 mt-5"

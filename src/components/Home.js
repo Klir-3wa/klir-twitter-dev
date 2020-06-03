@@ -17,7 +17,7 @@ export default class Home extends Component {
     return (
       <div className="container">
         <h1>Home Page</h1>
-        <TwitterMomentShare
+ <TwitterMomentShare
     momentId={'650667182356082688'}
   />
 
