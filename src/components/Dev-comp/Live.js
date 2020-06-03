@@ -293,7 +293,9 @@ export default class Live extends Component {
     return (
       <div>
         <div className="row mt-5">
-          sdqsdqs
+        <button type="submit"  className="btn btn-primary btn-block" onClick={this.handleClick}>
+          Stop
+        </button>
           {this.state.tweet.map((tw) => (
             <div className="col-md-4 mt-4" key={tw}>
               <TwitterTweetEmbed tweetId={tw} />
@@ -304,9 +306,7 @@ export default class Live extends Component {
             </div>
           ))}
         </div>
-        <button type="submit" onClick={this.handleClick}>
-          Stop
-        </button>
+        
       </div>
     );
   }
