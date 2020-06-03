@@ -28,7 +28,7 @@ export default class Header extends Component {
                 </Link>
               </li>
               <li className="nav-item active">
-                <Link className="nav-link" to="/live">
+                <Link className="nav-link" to="/dev/live">
                   Live
                 </Link>
               </li>
