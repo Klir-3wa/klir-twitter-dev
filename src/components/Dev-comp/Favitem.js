@@ -26,7 +26,7 @@ this.props.delete1(id);
          <div className="col-md-6 mt-4" key={this.props.tw.twitterID}>
                 <TwitterTweetEmbed tweetId={this.props.tw.twitterID}/>
                 
-                <button onClick={()=>this.delete(this.props.tw.id )}>Supprimer</button>
+                <button   className="btn btn-block btn-outline-secondary px-4"   onClick={()=>this.delete(this.props.tw.id )}>Supprimer</button>
               </div>
               
 

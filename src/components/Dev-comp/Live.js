@@ -258,14 +258,14 @@ handleClick1 = (data) => {
     return (
       <div>
         <div className="row mt-5">
-        <button type="submit"  className="btn btn-primary btn-block" onClick={this.handleClick}>
+        <button type="submit"    className="btn btn-block btn-outline-secondary px-4"  onClick={this.handleClick}>
           Stop
         </button>
           {this.state.tweet.map((tw) => (
             <div className="col-md-6 mt-4" key={tw}>
               <TwitterTweetEmbed tweetId={tw} />
 
-              <button onClick={()=>this.handleClick1(tw)}>ajouter au favoris</button>
+              <button    className="btn btn-block btn-outline-secondary px-4"   onClick={()=>this.handleClick1(tw)}>Ajouter au Favoris</button>
             </div>
           ))}
         </div>
