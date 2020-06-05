@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Axios from "axios";
+import axios from "axios";
 import {
   TwitterTimelineEmbed,
   TwitterShareButton,
@@ -25,9 +25,7 @@ export default class Live extends Component {
     };
     this.streamConnect = this.streamConnect.bind(this);
   }
-  handleClick = (e) => {
-    console.log("clicked");
-  };
+ 
 
   // handleClick() {
   //   console.log("clicked");
@@ -101,8 +99,7 @@ export default class Live extends Component {
     const get = util.promisify(request.get);
     const post = util.promisify(request.post);
 
-    // const consumer_key = ""; // Add your API key here
-    // const consumer_secret = ""; // Add your API secret key here
+  
 
     const bearerTokenURL = new URL(
       cors2 + "https://api.twitter.com/oauth2/token"
@@ -187,56 +184,13 @@ export default class Live extends Component {
       return response.body;
     }
 
-    // function streamConnect(token) {
-    //   // Listen to the stream
-    //   const config = {
-    //     url:
-    //       cors2 +
-    //       "https://api.twitter.com/labs/1/tweets/stream/filter?format=compact",
-    //     auth: {
-    //       bearer: token,
-    //     },
-    //     timeout: 20000,
-    //   };
-
-    //   const stream = request.get(config);
-
-    //   stream
-    //     .on("data", function (data) {
-    //       try {
-    //         const json = JSON.parse(data);
-    //         // console.log(json.data.id);
-    //         console.log("ééé" + this.state.tweet);
-    //         // console.log("sdqsdqssqdq");
-
-    //         this.setState({
-    //           tweet: json.data.id,
-    //         });
-    //         // console.log(this.state.tweet);
-
-    //         if (json.connection_issue) {
-    //           stream.emit("timeout");
-    //         }
-    //       } catch (e) {
-    //         // Heartbeat received. Do nothing.
-    //       }
-    //     })
-    //     .on("error", (error) => {
-    //       if (error.code === "ESOCKETTIMEDOUT") {
-    //         stream.emit("timeout");
-    //       }
-    //     });
-
-    //   return stream;
-    // }
-
     (async () => {
       let token, currentRules, stream;
       let timeout = 0;
 
       const rules = [
-        { value: "corona has:images", tag: "maghrib" },
-        { value: "morocco has:images -grumpy", tag: "morocco" },
+        { value: "corona has:images", tag: "usa" },
+        { value: "morocco has:images -grumpy", tag: "usa" },
       ];
 
       try {
@@ -275,7 +229,7 @@ export default class Live extends Component {
             console.warn("A connection error occurred. Reconnecting…");
             timeout++;
             stream.abort();
-            await sleep(2 ** timeout * 1000);
+            await sleep(20 ** timeout * 1000);
             connect();
           });
         } catch (e) {
@@ -289,6 +243,17 @@ export default class Live extends Component {
   componentDidUpdate() {
     console.log("update");
   }
+  
+handleClick1 = (data) => {
+  console.log(data.id)
+  
+
+ axios.post(`http://127.0.0.1:8000/api/twitter`,{twitterID:data.id})
+ .then((res)=>{
+   
+})
+
+}
   render() {
     return (
       <div>
@@ -300,7 +265,7 @@ export default class Live extends Component {
             <div className="col-md-6 mt-4" key={tw}>
               <TwitterTweetEmbed tweetId={tw} />
 
-              <button onClick={this.handleClick.bind(null, { id: tw.id_str })}>ajouter au favoris</button>
+              <button onClick={()=>this.handleClick1(tw)}>ajouter au favoris</button>
             </div>
           ))}
         </div>

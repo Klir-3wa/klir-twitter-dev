@@ -70,7 +70,7 @@ export class Search extends Component {
 
 
 handleClick = (data) => {
-  console.log(data.id)
+ alert("Le Tweet sélectionné a été ajouté  avec succès");
   
 
  axios.post(`http://127.0.0.1:8000/api/twitter`,{twitterID:data.id})
@@ -87,6 +87,10 @@ handleClick = (data) => {
     return (
       <div>
         <h1><img src={searchlogo} className="w-25"/> rechercher des #hashtags</h1>
+ 
+
+
+
         <form
           onSubmit={this.handleSubmit}
           className="form-inline my-2 my-lg-0 mt-5"
@@ -133,9 +137,9 @@ handleClick = (data) => {
               <div className="col-md-6 mt-4" key={tw.id_str}>
                 <TwitterTweetEmbed tweetId={tw.id_str} />
               
-  />
+  
                 
-                <button onClick={this.handleClick.bind(null, { id: tw.id_str })}>ajouter au favoris</button>
+                <button  className="btn btn-block btn-outline-secondary px-4"  onClick={this.handleClick.bind(null, { id: tw.id_str })}>ajouter au favoris</button>
               </div>
             ))}
 
