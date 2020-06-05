@@ -297,12 +297,10 @@ export default class Live extends Component {
           Stop
         </button>
           {this.state.tweet.map((tw) => (
-            <div className="col-md-4 mt-4" key={tw}>
+            <div className="col-md-6 mt-4" key={tw}>
               <TwitterTweetEmbed tweetId={tw} />
 
-              <a href="" className="btn btn-danger btn-blocl">
-                Ajouter au favoris
-              </a>
+              <button onClick={this.handleClick.bind(null, { id: tw.id_str })}>ajouter au favoris</button>
             </div>
           ))}
         </div>
