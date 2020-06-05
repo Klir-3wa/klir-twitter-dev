@@ -246,7 +246,7 @@ export default class Live extends Component {
   
 handleClick1 = (data) => {
   console.log(data.id)
-  
+  alert("Le Tweet sélectionné a été ajouté  avec succès");
 
  axios.post(`http://127.0.0.1:8000/api/twitter`,{twitterID:data.id})
  .then((res)=>{

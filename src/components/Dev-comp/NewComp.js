@@ -42,7 +42,7 @@ componentDidMount(){
 }
 
 delete2(id){
-  
+  alert("Le Tweet supprimé a été ajouté  avec succès");
   console.log(id);
   axios.delete(`http://127.0.0.1:8000/api/delete/${id}`)
   .then((res)=>{
@@ -60,11 +60,7 @@ delete2(id){
         <div className="container" >
           <div className="row mt-5">
             {this.state.tweet2.map((tw) => (
-              // <div className="col-md-4 mt-4" key={tw.twitterID}>
-              //   <TwitterTweetEmbed tweetId={tw.twitterID}/>
-
-              //   <button onClick={this.delete.bind(null, { id: tw.id })}>Supprimer</button>
-              // </div>
+              
              
        <Favitem   tw={tw}   delete1={this.delete2}/>
             ))
