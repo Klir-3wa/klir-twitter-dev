@@ -262,11 +262,34 @@ handleClick1 = (data) => {
           Stop
         </button>
           {this.state.tweet.map((tw) => (
-            <div className="col-md-6 mt-4" key={tw}>
-              <TwitterTweetEmbed tweetId={tw} />
+            // <div className="col-md-6 mt-4" key={tw}>
+            //   <TwitterTweetEmbed tweetId={tw} />
 
-              <button    className="btn btn-block btn-outline-secondary px-4"   onClick={()=>this.handleClick1(tw)}>Ajouter au Favoris</button>
-            </div>
+            //   <button    className="btn  btn-outline-secondary px-4"   onClick={()=>this.handleClick1(tw)}>Ajouter au Favoris</button>
+            // </div>
+
+<div class="modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
           ))}
         </div>
         
