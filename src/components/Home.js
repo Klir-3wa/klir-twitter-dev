@@ -21,12 +21,21 @@ state={
 }
 
 handlechange=(e)=>{
-  e.preventDefault();
+ 
   this.setState({
     screen:e.target.value
   })
-  console.log(e.target.value)
+  
 }
+
+handlesubmit =(e)=>{
+  e.preventDefault();
+ console.log(e.target[0].value)
+ this.setState({
+   type:e.target[0].value
+ })
+}
+
 
   render() {
   
@@ -34,17 +43,19 @@ handlechange=(e)=>{
       <div className="container">
 
 
-  
-     
 
-
-
-
-<form > 
-
+<form onSubmit={this.handlesubmit}> 
+<select className="form-control mdb-select md-form mr-2">
+            <option value={this.state.type} disabled selected>
+            type des tweets
+            </option>
+            <option value="Timeline">Timeline</option>
+            <option value="Hashtag">Hashtag</option>
+            <option value="Tweet">Tweet</option>
+          </select>
 
   <input onChange={this.handlechange}   className="form-control mr-sm-1 mt-2" type="text"/>
-
+<button type="submit">Search</button>
 </form>
 
         <Timeline
